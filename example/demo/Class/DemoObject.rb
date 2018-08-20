@@ -279,16 +279,3 @@ module S18T
 
     DEMO_COLORS = [ COLOR[:red], COLOR[:blue], COLOR[:yellow], COLOR[:green], COLOR[:cyan]];
 end
-
-
-
-=begin
-
-SSSS 111 888888 TTTT    EEEE             I
-SS    11 88  88  TT     EE                        EE
-SSSS  11 888888  TT     EEE  NN  N  GGGG I NN  N E  E
-  SS  11 88  88  TT     EE   N N N  G  G I N N N EEE
-SSSS  11 888888  TT     EEEE N  NN  GGGG I N  NN E
-                                       G          EEE
-                                    GGG       
-=end
