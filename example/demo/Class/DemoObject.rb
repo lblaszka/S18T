@@ -7,17 +7,17 @@ module S18T
 
         def start()
             @sprite = Sprite.new( Vector2.new(51,7));
-            spritePrint_S( COLOR[:red] );
-            spritePrint_1( COLOR[:yellow]);
-            spritePrint_8( COLOR[:green] );
-            spritePrint_T( COLOR[:blue] );
+            spritePrint_S( COLOR[:RED] );
+            spritePrint_1( COLOR[:YELLOW]);
+            spritePrint_8( COLOR[:GREEN] );
+            spritePrint_T( COLOR[:BLUE] );
 
-            spritePrint_E( COLOR[:cyan] );
-            spritePrint_n1( COLOR[:cyan] );
-            spritePrint_g( COLOR[:cyan] );
-            spritePrint_i( COLOR[:cyan] );
-            spritePrint_n2( COLOR[:cyan] );
-            spritePrint_e( COLOR[:cyan] );
+            spritePrint_E( COLOR[:CYAN] );
+            spritePrint_n1( COLOR[:CYAN] );
+            spritePrint_g( COLOR[:CYAN] );
+            spritePrint_i( COLOR[:CYAN] );
+            spritePrint_n2( COLOR[:CYAN] );
+            spritePrint_e( COLOR[:CYAN] );
 
 
             @changeSpeed =0.5;
@@ -44,7 +44,7 @@ module S18T
         def spritePrint_S( _color, _dx =0, _dy=0 )
             _x = 0 + _dx;
             _y = 0 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
 
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -72,7 +72,7 @@ module S18T
         def spritePrint_1( _color, _dx =0, _dy=0 )
             _x = 5 + _dx;
             _y = 0 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
 
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -94,7 +94,7 @@ module S18T
         def spritePrint_8( _color, _dx =0, _dy=0 )
             _x = 9 + _dx;
             _y = 0 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
 
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -132,7 +132,7 @@ module S18T
         def spritePrint_T( _color, _dx =0, _dy=0 )
             _x = 16 + _dx;
             _y = 0 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -155,7 +155,7 @@ module S18T
         def spritePrint_E( _color, _dx =0, _dy=0 )
             _x = 23 + _dx;
             _y = 0 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -182,7 +182,7 @@ module S18T
         def spritePrint_n1( _color, _dx =0, _dy=0 )
             _x = 28 + _dx;
             _y = 2 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -200,7 +200,7 @@ module S18T
         def spritePrint_g( _color, _dx =0, _dy=0 )
             _x = 34 + _dx;
             _y = 2 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -225,7 +225,7 @@ module S18T
         def spritePrint_i( _color, _dx =0, _dy=0 )
             _x = 39 + _dx;
             _y = 0 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             
@@ -239,7 +239,7 @@ module S18T
         def spritePrint_n2( _color, _dx =0, _dy=0 )
             _x = 41 + _dx;
             _y = 2 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 0, _y + 0, _pixel );
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
@@ -256,7 +256,7 @@ module S18T
         def spritePrint_e( _color, _dx =0, _dy=0 )
             _x = 47 + _dx;
             _y = 1 + _dy;
-            _pixel = Pixel.new(" ", COLOR[:default], _color);
+            _pixel = Pixel.new(" ", COLOR[:DEFAULT], _color);
             
             @sprite.setPixel(_x + 1, _y + 0, _pixel );
             @sprite.setPixel(_x + 2, _y + 0, _pixel );
@@ -277,5 +277,18 @@ module S18T
 
     end
 
-    DEMO_COLORS = [ COLOR[:red], COLOR[:blue], COLOR[:yellow], COLOR[:green], COLOR[:cyan]];
+    DEMO_COLORS = [ COLOR[:RED], COLOR[:BLUE], COLOR[:YELLOW], COLOR[:GREEN], COLOR[:CYAN]];
 end
+
+
+
+=begin
+
+SSSS 111 888888 TTTT    EEEE             I
+SS    11 88  88  TT     EE                        EE
+SSSS  11 888888  TT     EEE  NN  N  GGGG I NN  N E  E
+  SS  11 88  88  TT     EE   N N N  G  G I N N N EEE
+SSSS  11 888888  TT     EEEE N  NN  GGGG I N  NN E
+                                       G          EEE
+                                    GGG       
+=end

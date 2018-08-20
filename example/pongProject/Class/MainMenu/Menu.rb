@@ -8,14 +8,14 @@ module S18T
             Engine.GetScene().addObject( TextLabel.new(    :position => Vector2.new(5,5), 
                                                             :name => "menu_0", 
                                                             :text => " Pong Project ", 
-                                                            :text_color => COLOR[ :black ], 
-                                                            :text_bgColor => COLOR[ :blue ] ) );
+                                                            :text_color => COLOR[ :BLACK ], 
+                                                            :text_bgColor => COLOR[ :BLUE ] ) );
             
             Engine.GetScene().addObject( TextLabel.new(    :position => Vector2.new(5,6), 
                                                             :name => "menu_1", 
                                                             :text => " Play! ", 
-                                                            :text_color => COLOR[ :black ], 
-                                                            :text_bgColor => COLOR[ :grey ] ) );
+                                                            :text_color => COLOR[ :BLACK ], 
+                                                            :text_bgColor => COLOR[ :GREY ] ) );
             
             Engine.GetScene().addObject( TextLabel.new(    :position => Vector2.new(5,7), 
                                                             :name => "menu_2", 
@@ -58,11 +58,11 @@ module S18T
         end
 
         def unselectMenuObject( _index )
-            Engine.GetScene().findObjectsByName( "menu_"+_index.to_s )[0].setText( :text_bgColor => COLOR[ :default], :text_color => COLOR[ :default] );
+            Engine.GetScene().findObjectsByName( "menu_"+_index.to_s )[0].setText( :text_bgColor => COLOR[ :DEFAULT], :text_color => COLOR[ :DEFAULT] );
         end
 
         def selectMenuObject( _index )
-            Engine.GetScene().findObjectsByName( "menu_"+_index.to_s )[0].setText( :text_bgColor => COLOR[ :grey], :text_color => COLOR[ :black] );
+            Engine.GetScene().findObjectsByName( "menu_"+_index.to_s )[0].setText( :text_bgColor => COLOR[ :GREY], :text_color => COLOR[ :BLACK] );
         end
 
     end

@@ -1,15 +1,15 @@
 module S18T
     class Frame
-        @size = nil;
-        @buffor = nil;
-        @mask   = nil;  #change pixels
-        @changed   = false;
+        @size # S18T::Vector2 - size of sprite
+        @buffor # Array[ S18T::Pixel ] - container all pixels of sprite
+        @mask # Array[ boolean ] - pointing changed pixel
+        @changed # boolean - if sprite was changed.
 
         def initialize ( _size )
             @size = _size.clone
             
             @buffor = Array.new( _size.y * _size.x, String );
-            @mask = Array.new( _size.y * _size.x, 0 );
+            @mask = Array.new( _size.y * _size.x, false );
 
             clear();
         end
@@ -50,11 +50,11 @@ module S18T
             end
 
             @buffor[ getBufforOffset( _x, _y ) ] = _pixel;
-            @mask[ getBufforOffset( _x, _y ) ] = 1;
+            @mask[ getBufforOffset( _x, _y ) ] = true;
         end
 
         def printPixel( _x, _y )
-            @mask[ getBufforOffset( _x, _y ) ]=0;
+            @mask[ getBufforOffset( _x, _y ) ]=false;
             _pixel = @buffor[ getBufforOffset( _x, _y ) ];
 
             if( _pixel == nil )
@@ -75,7 +75,7 @@ module S18T
         end
 
         def wasCh?( _x, _y )
-            if(  @mask[ getBufforOffset( _x, _y ) ] == 1 )
+            if(  @mask[ getBufforOffset( _x, _y ) ] == true )
                 true
             else
                 false
@@ -98,14 +98,14 @@ module S18T
         def clear()
             @buffor.length.times do |i|
                 @buffor[i] = nil
-                @mask[i] = 0
+                @mask[i] = false
             end
         end
 
         def clearMask()
             @chaged = false;
             @mask.length.times do |i|
-                @mask[i] = 0
+                @mask[i] = false
             end
         end
     end

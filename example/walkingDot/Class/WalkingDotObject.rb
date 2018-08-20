@@ -4,7 +4,7 @@ module S18T
         def start()
             setPosition( Vector2.new(10,10) );
             @sprite = Sprite.new( Vector2.new(1,1));
-            @sprite.setPixel( 0,0, Pixel.new(" ",COLOR[:default], COLOR[:blue]));
+            @sprite.setPixel( 0,0, Pixel.new(" ",COLOR[:DEFAULT], COLOR[:BLUE]));
         end
 
         def update()

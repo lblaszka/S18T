@@ -11,8 +11,8 @@ module S18T
 
             TABLE_SIZE_Y.times do | _y |
 
-                @sprite.setPixel( 0, _y, Pixel.new( " ", COLOR[:grey], COLOR[:grey] ) );
-                @sprite.setPixel( TABLE_SIZE_X-1, _y, Pixel.new( " ", COLOR[:grey], COLOR[:grey] ) );
+                @sprite.setPixel( 0, _y, Pixel.new( " ", COLOR[:GREY], COLOR[:GREY] ) );
+                @sprite.setPixel( TABLE_SIZE_X-1, _y, Pixel.new( " ", COLOR[:GREY], COLOR[:GREY] ) );
 
             end
 
