@@ -10,7 +10,7 @@ Make sure you have ruby and git installed. Next, execute the following code in t
 ```bash
 cd ~/
 git clone https://github.com/lblaszka/S18T
-ruby ./example/pongProject/start.rb
+ruby ./S18T/example/pongProject/start.rb
 
 ```
 Have fun!
