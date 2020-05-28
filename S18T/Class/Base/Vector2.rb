@@ -94,4 +94,8 @@ module S18T
 
         #def >( _var )
     end
+
+    def self.Vector2( _x, _y )
+        return Vector2.new( _x, _y);
+    end
 end

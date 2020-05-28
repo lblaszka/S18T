@@ -13,11 +13,6 @@ module S18T
         end
 
         def setPixel( _x, _y, _pixel )
-            #if( !_pixel.is_a?( Pixel ) )
-            #    Debug.Log("Error! Sprite.setPixel - #{_pixel} isn't Pixel object!", :ERROR);
-            #    return;
-            #end
-
             if( _x > @size.x || _x < 0 )
                 Debug.Log("Error! Sprite.setPixel - Overload _x possition. Value: #{ _x.to_s }", :ERROR);
                 return;
@@ -42,7 +37,6 @@ module S18T
         def getPixel( _x, _y )
             return @draw[ _y * @size.x + _x ];
         end
-
 
     end
 end

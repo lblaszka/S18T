@@ -14,15 +14,4 @@ module S18T
             return @colors + @char + "\e[0m";
         end
     end
-
-    COLOR = {   :black => "0",
-                :red => "1",
-                :green => "2",
-                :yellow => "3",
-                :blue => "4",
-                :magnat => "5",
-                :cyan => "6",
-                :grey => "7",
-                :default => "9"
-            }
 end

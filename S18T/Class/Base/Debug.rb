@@ -10,12 +10,15 @@ module S18T
             def Log ( _message, _type=0 )
                 if( @@mode == 1 )
                     if( _type == :ERROR )
-                        Cursor.setColor(1,0);
+                        Cursor.SetColor(1,0);
                     end
-                    Cursor.setPosition(0,0);
+                    Cursor.SetPosition(0,0);
                     puts( _message );
 
-                    Cursor.setColor();
+                    Cursor.SetColor();
+                    if( _type == :ERROR )
+                        Engine.Stop();
+                    end
                 end
             end
         end

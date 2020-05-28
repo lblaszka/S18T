@@ -39,8 +39,8 @@ module S18T
     class Game_Player < Game_Paddle
 
         def start()
-            @fgColor = COLOR[:blue];
-            @bgColor = COLOR[:default];
+            @fgColor = COLOR[:BLUE];
+            @bgColor = COLOR[:DEFAULT];
             drawPaddle();
         end
 
@@ -59,8 +59,8 @@ module S18T
     class Game_Bot < Game_Paddle
 
         def start()
-            @fgColor = COLOR[:red];
-            @bgColor = COLOR[:default];
+            @fgColor = COLOR[:RED];
+            @bgColor = COLOR[:DEFAULT];
             drawPaddle();
         end
 

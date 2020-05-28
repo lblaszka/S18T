@@ -1,5 +1,5 @@
 module S18T
-    dir = File.dirname(__FILE__)+"/"
+    dir = "./"+File.dirname(__FILE__)+"/"
     require dir+"../../S18T/S18T.rb"
     require dir+"Class/Include.rb"
 

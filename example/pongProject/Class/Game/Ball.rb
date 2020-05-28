@@ -5,7 +5,7 @@ module S18T
         def start()
 
             @sprite = Sprite.new( Vector2.new(1,1) );
-            @sprite.setPixel( 0,0, Pixel.new("o", COLOR[:grey]));
+            @sprite.setPixel( 0,0, Pixel.new("o", COLOR[:GREY]));
 
             @moveDir =  Vector2.new(0,-1);
             @moveSpeed = 0.2;
@@ -14,9 +14,8 @@ module S18T
         end
 
         def update()
-
             if( @nextMove < Engine.GetTime() )
-                @nextMove = Engine.GetTime() + @moveSpeed;
+                @nextMove = Engine.GetTime() + ( @moveSpeed * @moveDir.value ) ;
                 collisionWithWalls();
                 collisionWithPaddles();
                 move();

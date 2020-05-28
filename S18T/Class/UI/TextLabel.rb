@@ -2,31 +2,37 @@ module S18T
 
     class TextLabel < Object
 
+        @text # String
+        @text_color # string/char - font color
+        @text_bgColor # String/char - background color
+
         def initialize ( _args )
             super( _args );
             setText( _args );
         end
 
+        public
         def setText( _args )
-            if( _args[:text] != nil )
+            if( _args[:text].is_a?(String) )
                 @text = _args[:text];
             end
 
             if( _args[ :text_color ] != nil )
                 @text_color = _args[ :text_color ];
             else
-                @text_color = COLOR[ :default ];
+                @text_color = COLOR[ :DEFAULT ];
             end
 
             if( _args[ :text_bgColor ] != nil )
                 @text_bgColor = _args[ :text_bgColor ];
             else
-                @text_bgColor = COLOR[ :default ];
+                @text_bgColor = COLOR[ :DEFAULT ];
             end
             setSpriteText();
             
         end
 
+        private
         def setSpriteText
             if( @text.is_a?( String ) )
                 if( ( @sprite == nil ) || ( ( @text.length - @sprite.getSize().x ) > 0 ) )
